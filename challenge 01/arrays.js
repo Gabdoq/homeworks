@@ -11,7 +11,7 @@
 const array1 = [1, 2, 3, 4, 5];
 const array2 = new Array(5); // Array vacío con 5 espacios
 const array3 = Array.of(1, 2, 3); // Crea array con los elementos dados
-const array4 = Array.from("hola"); // Crea array desde un iterable: ['h', 'o', 'l', 'a']
+const array4 = Array.from("hola"); // Crea array desde un iterable
 
 console.log("=== CREACIÓN DE ARRAYS ===");
 console.log("Array literal:", array1);
