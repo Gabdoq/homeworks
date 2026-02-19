@@ -1,0 +1,228 @@
+/* Estilos minimalistas para la lista enlazada simple */
+.contenedor {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 24px;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* Navegación */
+.navegacion {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.navegacion a {
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.navegacion a:hover {
+  text-decoration: underline;
+}
+
+/* Encabezado */
+.encabezado {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.encabezado h1 {
+  font-size: 1.75rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0 0 4px 0;
+}
+
+.encabezado p {
+  color: #64748b;
+  margin: 0;
+}
+
+/* Reproductor */
+.reproductor {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.icono-reproductor {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+.info-cancion h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.info-cancion p {
+  margin: 0 0 8px 0;
+  opacity: 0.85;
+}
+
+.info-cancion span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Controles */
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.controles button {
+  padding: 10px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.controles button:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.controles button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.controles .btn-principal {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.controles .btn-principal:hover {
+  background: #4f46e5;
+}
+
+/* Lista */
+.lista {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.lista h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64748b;
+  margin: 0 0 16px 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.15s;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item.activo {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: white;
+}
+
+.numero {
+  width: 28px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.item.activo .numero {
+  opacity: 0.8;
+}
+
+.datos {
+  flex: 1;
+}
+
+.datos strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.datos small {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.item.activo .datos small {
+  opacity: 0.75;
+}
+
+.duracion {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.item.activo .duracion {
+  opacity: 0.75;
+}
+
+/* Información */
+.info {
+  background: #f0fdf4;
+  border-left: 3px solid #22c55e;
+  padding: 20px;
+  border-radius: 0 12px 12px 0;
+}
+
+.info h4 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #166534;
+  margin: 0 0 12px 0;
+}
+
+.info ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.info li {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.info code {
+  background: rgba(22, 101, 52, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.8rem;
+  color: #166534;
+}
