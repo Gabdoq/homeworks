@@ -1,0 +1,451 @@
+/**
+ * SISTEMA DE DISEÑO - Paleta de Colores Premium
+ * ================================================
+ * Primario: #2563EB (Azul)
+ * Secundario: #7C3AED (Púrpura)
+ * Éxito: #10B981 (Verde)
+ * Advertencia: #F59E0B (Ámbar)
+ * Error: #EF4444 (Rojo)
+ * Superficie: #FFFFFF
+ * Fondo: #F9FAFB
+ * Texto: #111827
+ * Borde: #E5E7EB
+ */
+
+/* ==================== RESET Y VARIABLES ==================== */
+:root {
+  /* Colores Primarios */
+  --primary: #2563EB;
+  --primary-dark: #1D4ED8;
+  --primary-light: #DBEAFE;
+  
+  /* Colores Secundarios */
+  --secondary: #7C3AED;
+  --secondary-dark: #6D28D9;
+  --secondary-light: #EDE9FE;
+  
+  /* Colores de Estado */
+  --success: #10B981;
+  --success-light: #D1FAE5;
+  --warning: #F59E0B;
+  --warning-light: #FEF3C7;
+  --error: #EF4444;
+  --error-light: #FEE2E2;
+  
+  /* Escala de Grises */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  
+  /* Superficie */
+  --surface: #FFFFFF;
+  --surface-alt: #F9FAFB;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--gray-50);
+  color: var(--gray-900);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ==================== CONTENEDOR PRINCIPAL ==================== */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.03) 0%, rgba(124, 58, 237, 0.03) 100%);
+}
+
+/* ==================== HEADER ==================== */
+.header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  padding: 48px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  font-size: 16px;
+  opacity: 0.92;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+main {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: var(--surface);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xl);
+  padding: 40px;
+}
+
+/* ==================== CONTROLES ==================== */
+.controls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.form-add {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.input-turno {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid var(--gray-200);
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  background: var(--gray-50);
+}
+
+.input-turno:hover {
+  border-color: var(--gray-300);
+  background: var(--surface);
+}
+
+.input-turno:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.btn-agregar,
+.btn-siguiente {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-agregar:hover,
+.btn-siguiente:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-agregar:active,
+.btn-siguiente:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-md);
+}
+
+.turno-actual {
+  padding: 12px 20px;
+  background: var(--gray-100);
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-700);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.turno-actual strong {
+  color: var(--primary);
+}
+
+/* ==================== LISTA DE TURNOS ==================== */
+.queue {
+  margin-top: 24px;
+}
+
+.turn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--gray-50);
+  border: 2px solid var(--gray-200);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.turn:hover {
+  border-color: var(--gray-300);
+  background: var(--gray-100);
+}
+
+.turn .numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--gray-200);
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--gray-700);
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.turn .nombre {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.turn.current {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.turn.current .numero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  font-size: 18px;
+}
+
+.turn.current .nombre {
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+
+.btn-eliminar {
+  padding: 8px 14px;
+  background: var(--error);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.btn-eliminar:hover {
+  background: #DC2626;
+  transform: scale(1.05);
+}
+
+.btn-eliminar:active {
+  transform: scale(0.95);
+}
+
+/* ==================== MENSAJES ==================== */
+.msg {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--warning-light);
+  border-left: 4px solid var(--warning);
+  border-radius: 8px;
+  color: #92400E;
+  font-size: 14px;
+  animation: slideIn 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.msg-notif {
+  background: var(--success-light);
+  border-left-color: var(--success);
+  color: #065F46;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: var(--gray-900);
+  color: var(--gray-400);
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid var(--gray-200);
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+  .header {
+    padding: 36px 24px;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  .header p {
+    font-size: 15px;
+  }
+  
+  main {
+    margin: 24px auto;
+    padding: 24px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form-add {
+    width: 100%;
+  }
+  
+  .btn-siguiente {
+    width: 100%;
+  }
+  
+  .turno-actual {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .turn {
+    flex-wrap: wrap;
+  }
+  
+  .btn-eliminar {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .header {
+    padding: 28px 16px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .header p {
+    font-size: 14px;
+  }
+  
+  main {
+    margin: 16px auto;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .controls {
+    gap: 10px;
+  }
+  
+  .form-add {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input-turno {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .btn-agregar,
+  .btn-siguiente {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .turn {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  
+  .turn .numero {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .turn .nombre {
+    font-size: 14px;
+  }
+  
+  .btn-eliminar {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
