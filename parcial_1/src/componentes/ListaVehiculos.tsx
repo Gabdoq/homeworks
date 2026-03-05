@@ -11,7 +11,7 @@ export default function ListaVehiculos({ vehiculos }: { vehiculos: Vehiculo[] })
             <p><strong>{v.marca} {v.modelo}</strong></p>
             <p className="gris">{v.tipo} — {v.placa}</p>
           </div>
-          <span className="etiqueta verde">Disponible</span>
+
         </div>
       ))}
     </div>

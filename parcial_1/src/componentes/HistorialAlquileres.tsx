@@ -19,8 +19,8 @@ export default function HistorialAlquileres({ alquileres, alDevolver }: Props) {
             {a.fechaDevolucion && <p className="gris">Devuelto: {a.fechaDevolucion.toLocaleDateString()}</p>}
           </div>
           {!a.fechaDevolucion
-            ? <button onClick={() => alDevolver(a.id)} className="boton verde chico">Devolver</button>
-            : <span className="etiqueta azul">Devuelto</span>
+            ? <button onClick={() => alDevolver(a.id)} className="boton chico">Devolver</button>
+            : <span className="etiqueta">Devuelto</span>
           }
         </div>
       ))}
