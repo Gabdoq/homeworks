@@ -1,0 +1,254 @@
+/* ============================================
+   ESTILOS PÁGINA DE INICIO
+   ============================================ */
+
+.contenedor-inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+}
+
+/* Header */
+.header-inicio {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  padding: 25px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.bienvenida h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.usuario-actual {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.nombre-usuario {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.boton-logout {
+  background: rgba(102, 126, 234, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  border: 1px solid rgba(102, 126, 234, 0.4);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.boton-logout:hover {
+  background: rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+  border-color: rgba(102, 126, 234, 0.6);
+}
+
+/* Contenido principal */
+.contenido-inicio {
+  flex: 1;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sección de bienvenida */
+.seccion-bienvenida {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: desvanecimiento 0.8s ease-out;
+}
+
+@keyframes desvanecimiento {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seccion-bienvenida h2 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.seccion-bienvenida p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Grid de ejercicios */
+.grid-ejercicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.tarjeta-ejercicio {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.tarjeta-ejercicio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.tarjeta-ejercicio:hover {
+  transform: translateY(-8px);
+  border-color: rgba(102, 126, 234, 0.6);
+  background: rgba(102, 126, 234, 0.15);
+  box-shadow: 0 16px 48px rgba(102, 126, 234, 0.2);
+}
+
+.tarjeta-ejercicio:hover::before {
+  left: 100%;
+}
+
+.icono {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-ejercicio:hover .icono {
+  transform: scale(1.15) rotate(5deg);
+}
+
+.tarjeta-ejercicio h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tarjeta-ejercicio p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.flecha {
+  font-size: 1.3rem;
+  color: #667eea;
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.tarjeta-ejercicio:hover .flecha {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Info de usuario */
+.info-usuario-completa {
+  background: rgba(102, 126, 234, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+.info-usuario-completa h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.datos-usuario {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.datos-usuario p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.datos-usuario strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer-inicio {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-inicio {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .contenido-inicio {
+    padding: 40px 20px;
+  }
+
+  .seccion-bienvenida h2 {
+    font-size: 1.6rem;
+  }
+
+  .grid-ejercicios {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tarjeta-ejercicio {
+    padding: 30px 20px;
+  }
+}
