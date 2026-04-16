@@ -1,0 +1,119 @@
+.formulario-crear {
+  background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+  padding: 15px;
+  border: 3px solid #00897b;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.formulario-crear h3 {
+  margin-top: 0;
+  color: #1565c0;
+  font-size: 1.1em;
+  border-bottom: 3px solid #00897b;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.formulario-crear .form-grupo {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-crear .form-grupo label {
+  font-weight: bold;
+  margin-bottom: 3px;
+  color: #0097a7;
+  font-size: 0.9em;
+}
+
+.formulario-crear .form-grupo input,
+.formulario-crear .form-grupo select {
+  padding: 8px;
+  border: 1px solid #999;
+  font-size: 0.9em;
+  font-family: Arial, sans-serif;
+}
+
+.formulario-crear .form-grupo input:focus,
+.formulario-crear .form-grupo select:focus {
+  outline: none;
+  border: 2px solid #1565c0;
+  background-color: #e0f7fa;
+}
+
+.formulario-crear .form-grupo input:disabled,
+.formulario-crear .form-grupo select:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.formulario-crear .form-grupo select {
+  cursor: pointer;
+}
+
+.formulario-crear button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(90deg, #0097a7 0%, #00897b 100%);
+  color: white;
+  border: 2px solid #00897b;
+  font-size: 0.95em;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.formulario-crear button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #00897b 0%, #00695c 100%);
+  border-color: #00695c;
+}
+
+.formulario-crear button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.formulario-crear .error-mensaje {
+  padding: 10px;
+  background-color: #ffcccc;
+  color: #990000;
+  border: 2px solid #990000;
+  margin-bottom: 12px;
+  font-size: 0.9em;
+}
+
+.formulario-crear .advertencia {
+  padding: 10px;
+  background-color: #ffffcc;
+  color: #996600;
+  border: 2px solid #996600;
+  margin-bottom: 12px;
+  font-size: 0.9em;
+}
+
+.formulario-crear .info-seleccionado {
+  margin-top: 12px;
+  padding: 10px;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  border: 2px solid #0097a7;
+}
+
+.formulario-crear .info-seleccionado p {
+  margin: 4px 0;
+  font-size: 0.85em;
+  color: #004d40;
+}
+
+.formulario-crear .info-seleccionado p strong {
+  font-weight: bold;
+  color: #1565c0;
+}
+
+.formulario-crear .info-seleccionado p.tipo {
+  margin-top: 6px;
+}

@@ -1,0 +1,169 @@
+.nodo {
+  margin-bottom: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 0.95em;
+}
+
+.nodo.nodo-carpeta .icono {
+  color: #0097a7;
+  font-weight: bold;
+  background-color: #b2ebf2;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.nodo.nodo-archivo .icono {
+  color: #1565c0;
+  font-weight: bold;
+  background-color: #bbdefb;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.nodo.seleccionado .nodo-contenedor {
+  background: linear-gradient(90deg, #c8e6c9 0%, #a5d6a7 100%);
+  border: 2px solid #00897b;
+}
+
+.nodo .nodo-contenedor {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.1s;
+  background-color: white;
+}
+
+.nodo .nodo-contenedor:hover {
+  background-color: #f0f0f0;
+  border: 1px solid #666;
+}
+
+.nodo .nodo-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.nodo .nodo-header .boton-expandir {
+  background: none;
+  border: 1px solid #666;
+  cursor: pointer;
+  color: #333;
+  padding: 2px 4px;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.nodo .nodo-header .boton-expandir.expandido {
+  transform: rotate(90deg);
+}
+
+.nodo .nodo-header .boton-expandir:hover {
+  background-color: #0097a7;
+  color: white;
+}
+
+.nodo .nodo-header .espaciador {
+  display: none;
+}
+
+.nodo .nodo-header .icono {
+  display: inline-flex;
+  align-items: center;
+  min-width: auto;
+  font-weight: bold;
+}
+
+.nodo .nodo-header .nombre {
+  flex: 1;
+  font-weight: normal;
+  color: #333;
+  word-break: break-word;
+}
+
+.nodo .nodo-header .input-renombrar {
+  flex: 1;
+  padding: 2px 4px;
+  border: 2px solid #333;
+  border-radius: 0;
+  font-size: 0.95em;
+  font-family: Arial, monospace;
+}
+
+.nodo .nodo-header .input-renombrar:focus {
+  outline: none;
+  border: 2px solid #0097a7;
+  background-color: #e0f7fa;
+}
+
+.nodo .nodo-header .acciones {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+
+.nodo .nodo-header .boton-accion {
+  background: none;
+  border: 1px solid #666;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 0;
+  font-size: 0.85em;
+  transition: all 0.1s;
+  font-weight: bold;
+}
+
+.nodo .nodo-header .boton-accion:hover {
+  background-color: #f0f0f0;
+  border: 1px solid #333;
+}
+
+.nodo .nodo-header .boton-eliminar:hover {
+  background-color: #ffcccc;
+  border-color: #d32f2f;
+}
+
+.nodo .nodo-header .boton-renombrar:hover {
+  background-color: #c8e6c9;
+  border-color: #00897b;
+}
+
+.nodo .nodo-header .info-creador {
+  font-size: 0.8em;
+  cursor: help;
+  color: #0097a7;
+  font-weight: bold;
+}
+
+.nodo .nodo-info {
+  display: flex;
+  gap: 12px;
+  margin-top: 2px;
+  padding-left: 20px;
+  font-size: 0.7em;
+  color: #999;
+}
+
+.nodo .nodo-info .fecha,
+.nodo .nodo-info .creador {
+  display: block;
+}
+
+.nodo .nodo-hijos {
+  margin-top: 2px;
+  padding-left: 15px;
+  border-left: 2px solid #0097a7;
+}
+
+.nodo:hover .acciones {
+  opacity: 1;
+}
