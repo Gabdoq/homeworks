@@ -1,0 +1,43 @@
+.navegador {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.contenedor-navegador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.boton-navegador {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.boton-navegador:hover {
+  color: #2c5aa0;
+  background-color: #f0f0f0;
+}
+
+.boton-navegador.activo {
+  color: #2c5aa0;
+  font-weight: 600;
+}
+
+.separador {
+  color: #999;
+  font-size: 12px;
+}
