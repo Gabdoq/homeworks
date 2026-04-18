@@ -11,7 +11,6 @@ export const AreaContenido: React.FC<AreaContenidoProps> = ({ elementoSelecciona
     return (
       <div className="area-contenido">
         <div className="mensaje-bienvenida">
-          <div className="icono-bienvenida">👋</div>
           <h1>Bienvenido</h1>
           <p>Selecciona un elemento del menú para ver su contenido</p>
         </div>
@@ -31,7 +30,6 @@ export const AreaContenido: React.FC<AreaContenidoProps> = ({ elementoSelecciona
             <elementoSeleccionado.componente />
           ) : (
             <div className="componente-predeterminado">
-              <div className="icono-elemento">📄</div>
               <h3>{elementoSeleccionado.titulo}</h3>
               <p>Contenido para: <code>{elementoSeleccionado.enlace}</code></p>
               <p className="id-menu">ID: <strong>{elementoSeleccionado.id}</strong></p>
