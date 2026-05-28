@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ritmo Global - Parcial 3</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="dashboard">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Regueton, pop y salsa</p>
+          <h1>Ritmo Global</h1>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="home-layout">
+        <article class="panel panel--featured">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Recomendador</p>
+              <h2>Recomendado para ti</h2>
+            </div>
+          </div>
+          <div class="featured-control">
+            <label for="recommendation-select">Elige una cancion que te guste</label>
+            <select id="recommendation-select"></select>
+          </div>
+          <div id="recommendation-cards" class="song-cards"></div>
+        </article>
+
+        <aside class="panel panel--genres">
+          <p class="eyebrow">Generos</p>
+          <h2>Explora rapido</h2>
+          <div class="genre-list">
+            <button type="button" class="genre-button is-active" data-genre="Regueton">
+              Regueton
+            </button>
+            <button type="button" class="genre-button" data-genre="Ingles">
+              Musica en ingles
+            </button>
+            <button type="button" class="genre-button" data-genre="Salsa">
+              Salsa
+            </button>
+          </div>
+          <div id="genre-songs" class="genre-songs"></div>
+        </aside>
+      </section>
+
+      <section class="grid">
+        <article class="panel panel--ranking">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Popularidad</p>
+              <h2>Las mas sonadas</h2>
+            </div>
+            <span class="pill">Top reproducciones</span>
+          </div>
+          <ol id="ranking-list" class="ranking"></ol>
+        </article>
+
+        <article class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Buscador</p>
+              <h2>Busca una cancion</h2>
+            </div>
+          </div>
+          <form id="song-form" class="form">
+            <label for="song-title">Insertar cancion</label>
+            <div class="form__row">
+              <input id="song-title" type="text" placeholder="Ej: Gasolina - Daddy Yankee" />
+              <select id="song-genre" aria-label="Genero de la cancion">
+                <option value="Regueton">Regueton</option>
+                <option value="Ingles">Musica en ingles</option>
+                <option value="Salsa">Salsa</option>
+              </select>
+              <button type="submit">Insertar</button>
+            </div>
+          </form>
+          <div class="form">
+            <label for="search-input">Buscar por titulo o prefijo</label>
+            <input id="search-input" type="text" placeholder="Escribe un prefijo..." />
+          </div>
+          <div class="result">
+            <h3>Resultado</h3>
+            <p id="exists-result">Escribe una cancion para validar si existe.</p>
+          </div>
+          <div class="result">
+            <h3>Sugerencias</h3>
+            <ul id="suggestions-list" class="list"></ul>
+          </div>
+        </article>
+
+        <article class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Conexiones</p>
+              <h2>Como se conectan las canciones</h2>
+            </div>
+          </div>
+          <div id="graph-view" class="graph"></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
